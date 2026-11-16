@@ -2,8 +2,8 @@
    1. VARIABLES Y CONFIGURACIÓN GLOBAL
    ========================================== */
 :root {
-    --primary-color: #1a2a3a;      /* Azul marino elegante */
-    --accent-color: #d4af37;       /* Dorado / Cristal de alta calidad */
+    --primary-color: #1a2a3a;
+    --accent-color: #d4af37;
     --accent-hover: #b89628;
     --whatsapp-color: #25d366;
     --whatsapp-hover: #1da851;
@@ -12,11 +12,12 @@
     --text-dark: #2c3e50;
     --text-muted: #6c757d;
     --border-color: #e2e8f0;
-    
+
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --container-width: 1200px;
     --transition-fast: 0.3s ease;
     --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --navbar-height: 80px;
 }
 
 /* Reset básico */
@@ -24,6 +25,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
 }
 
 body {
@@ -48,6 +54,30 @@ img {
     display: block;
 }
 
+button {
+    font-family: inherit;
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--primary-color);
+    color: var(--bg-white);
+    padding: 10px 16px;
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+}
+
 /* Layout Global */
 .container {
     max-width: var(--container-width);
@@ -58,6 +88,27 @@ img {
 main.container {
     padding-top: 40px;
     padding-bottom: 60px;
+}
+
+section h2 {
+    color: var(--primary-color);
+}
+
+.services-preview,
+.features,
+.about-hero,
+.mission-vision-grid,
+.values-section,
+.gallery-section {
+    padding-top: 50px;
+}
+
+.services-preview > h2,
+.features > h2,
+.values-section > h2,
+.gallery-section > h2 {
+    text-align: center;
+    font-size: 2rem;
 }
 
 /* Encabezados de página */
@@ -85,10 +136,15 @@ footer {
     margin-top: 60px;
 }
 
+.cta-banner + footer {
+    margin-top: 0;
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
 .social-links a {
@@ -99,4 +155,44 @@ footer {
 
 .social-links a:hover {
     color: var(--accent-color);
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--whatsapp-color);
+    color: var(--bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 900;
+    transition: background-color var(--transition-fast), transform 0.2s;
+}
+
+.whatsapp-float:hover {
+    background-color: var(--whatsapp-hover);
+    transform: scale(1.08);
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+    }
 }

@@ -4,7 +4,7 @@
 
 /* Tabletas y Pantallas Medianas (Menos de 992px) */
 @media (max-width: 992px) {
-    .service-detail, 
+    .service-detail,
     .service-detail.reverse {
         flex-direction: column;
     }
@@ -22,15 +22,50 @@
 /* Dispositivos Móviles (Menos de 768px) */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
+        flex-wrap: wrap;
+        padding: 12px 20px;
+        gap: 12px;
+    }
+
+    .logo {
+        order: 1;
+        margin-right: auto;
+    }
+
+    .navbar > .btn {
+        order: 2;
+        padding: 9px 16px;
+        font-size: 0.9rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        order: 3;
+    }
+
+    .navbar nav {
+        order: 4;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar nav.open {
+        display: block;
     }
 
     .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero {
+        padding: 80px 20px;
     }
 
     .hero h1 {
@@ -45,9 +80,18 @@
         flex-direction: column;
     }
 
+    .page-header h1,
+    .about-hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .calculator-section,
+    .contact-form-container {
+        padding: 25px 20px;
+    }
+
     .footer-content {
         flex-direction: column;
-        gap: 15px;
         text-align: center;
     }
 
