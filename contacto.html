@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Flores. Agencia de Meseros</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/icons/logo.jpg">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logos/logo.jpg" alt="Flores. Agencia de Meseros Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="contacto.html" class="btn btn-primary">Cotizar Evento</a>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Ponte en Contacto</h1>
+            <p>Cotiza meseros, loza o mobiliario para tu evento sin compromiso.</p>
+        </section>
+
+        <div class="contact-layout">
+            <!-- Formulario de Contacto -->
+            <section class="contact-form-container">
+                <h2>Envíanos un Mensaje</h2>
+                <form id="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Carlos Mendoza">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono / WhatsApp:</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 4433514415">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha del Evento:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lugar">Lugar / Ciudad del evento:</label>
+                        <input type="text" id="lugar" name="lugar" placeholder="Ej. Salón Jardín, Morelia">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Detalles del Evento (Meseros necesarios, loza, sillas, mesas, etc.):</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí los detalles..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Solicitud por WhatsApp</button>
+                </form>
+            </section>
+
+            <!-- Información Directa y Cobertura -->
+            <aside class="contact-info">
+                <h2>Información Directa</h2>
+                <div class="info-item">
+                    <h3>WhatsApp / Teléfono Directo</h3>
+                    <p><a href="https://wa.me/524433514415" target="_blank">+52 443 351 4415</a></p>
+                </div>
+                <div class="info-item">
+                    <h3>Página de Facebook</h3>
+                    <p><a href="https://www.facebook.com/profile.php?id=61565038633847" target="_blank">Flores. Agencia de Meseros</a></p>
+                </div>
+                <div class="info-item">
+                    <h3>Horario de Atención</h3>
+                    <p>Lunes a Domingo: Atención personal y cotizaciones rápidas</p>
+                </div>
+
+                <div class="coverage-box">
+                    <h3>Zona de Cobertura</h3>
+                    <p>Atendemos eventos en Morelia y zonas aledañas bajo previa agenda.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Flores. Agencia de Meseros. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61565038633847" target="_blank">Facebook</a>
+                <a href="https://wa.me/524433514415" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/whatsapp.js"></script>
+</body>
+</html>

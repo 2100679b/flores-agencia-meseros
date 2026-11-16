@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Flores. Agencia de Meseros</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/icons/logo.jpg">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logos/logo.jpg" alt="Flores. Agencia de Meseros Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html" class="active">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="contacto.html" class="btn btn-primary">Cotizar Evento</a>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Nuestros Servicios</h1>
+            <p>Soluciones integrales de personal, vajilla y equipo para todo tipo de celebración.</p>
+        </section>
+
+        <!-- Detalle de Servicios -->
+        <section class="services-list">
+            <article class="service-detail">
+                <img src="assets/images/equipo/meseros.jpg" alt="Servicio de Meseros">
+                <div class="service-text">
+                    <h2>Servicio de Meseros y Personal de Atención</h2>
+                    <p>Personal capacitado y uniformado para banquetes, buffet, cócteles y eventos corporativos.</p>
+                    <ul>
+                        <li>Atención directa y cordial a invitados en mesa.</li>
+                        <li>Capitanes de meseros para la logística y coordinación general.</li>
+                        <li>Servicio por horas o evento completo.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="service-detail reverse">
+                <img src="assets/images/equipo/barman.jpg" alt="Renta de Loza y Cristalería">
+                <div class="service-text">
+                    <h2>Renta de Loza y Cristalería</h2>
+                    <p>Contamos con vajilla y cristalería de alta calidad para vestir las mesas de tu evento con elegancia.</p>
+                    <ul>
+                        <li>Platos trinches, soperos, postreros y cubertería completa.</li>
+                        <li>Copas para vino, agua, brindis y vasos de cristal.</li>
+                        <li>Entrega limpia, puntual y empacada con higiene.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="service-detail">
+                <img src="assets/images/equipo/capitan.jpg" alt="Renta de Mobiliario">
+                <div class="service-text">
+                    <h2>Renta de Mobiliario para Eventos</h2>
+                    <p>Todo el equipo necesario para alojar a tus invitados de forma cómoda y estética.</p>
+                    <ul>
+                        <li>Mesas redondas, cuadradas, rectangulares y tipo bar.</li>
+                        <li>Sillas elegantes (estilo Tiffany, Crossback, plegables, etc.).</li>
+                        <li>Mantelería, caminos de mesa y servilletas de tela.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección Calculadora / Cotizador -->
+        <section class="calculator-section">
+            <h2>Calcula una Estimación para tu Evento</h2>
+            <form id="cotizador-form" class="calculator-form">
+                <div class="form-group">
+                    <label for="tipo-servicio">Tipo de Evento:</label>
+                    <select id="tipo-servicio" name="tipo-servicio">
+                        <option value="Boda">Boda</option>
+                        <option value="XV Años">XV Años</option>
+                        <option value="Bautizo / Primera Comunión">Bautizo / Primera Comunión</option>
+                        <option value="Fiesta Infantil">Fiesta Infantil</option>
+                        <option value="Cumpleaños / Aniversario">Cumpleaños / Aniversario</option>
+                        <option value="Despedida de Soltero/a">Despedida de Soltero/a</option>
+                        <option value="Graduación">Graduación</option>
+                        <option value="Fiesta Privada / Cerveceada">Fiesta Privada / Cerveceada</option>
+                        <option value="Banquete Formal / Gala">Banquete Formal / Gala</option>
+                        <option value="Buffet / Taquiza">Buffet / Taquiza</option>
+                        <option value="Cóctel / Canapés">Cóctel / Canapés</option>
+                        <option value="Evento Corporativo / Empresarial">Evento Corporativo / Empresarial</option>
+                        <option value="Otro tipo de evento">Otro tipo de evento</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="invitados">Número de Invitados estimado:</label>
+                    <input type="number" id="invitados" name="invitados" placeholder="Ej. 120" min="10" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="horas">Horas de servicio requeridas:</label>
+                    <input type="number" id="horas" name="horas" placeholder="Ej. 5" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="meseros-solicitados">Número de Meseros deseados (Opcional):</label>
+                    <input type="number" id="meseros-solicitados" name="meseros-solicitados" placeholder="Ej. 4 (déjalo vacío si deseas nuestra sugerencia)" min="1">
+                </div>
+
+                <!-- Servicios Adicionales Requeridos -->
+                <div class="form-group">
+                    <label>Servicios adicionales requeridos:</label>
+                    <div style="display: flex; gap: 20px; margin-top: 5px; flex-wrap: wrap;">
+                        <label style="font-weight: normal; cursor: pointer;">
+                            <input type="checkbox" id="req-loza" name="req-loza"> Renta de Loza y Cristalería
+                        </label>
+                        <label style="font-weight: normal; cursor: pointer;">
+                            <input type="checkbox" id="req-mobiliario" name="req-mobiliario"> Renta de Mobiliario (Mesas/Sillas/Mantelería)
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" id="btn-calcular" class="btn btn-secondary">Generar Estimación</button>
+            </form>
+
+            <div id="resultado-cotizacion" class="result-box hidden">
+                <h3>Resumen de la Solicitud:</h3>
+                <p id="recomendacion-texto"></p>
+                <a id="btn-cotizar-whatsapp" href="#" class="btn btn-whatsapp" target="_blank">Enviar esta cotización por WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Flores. Agencia de Meseros. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61565038633847" target="_blank">Facebook</a>
+                <a href="https://wa.me/524433514415" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts correctamente enlazados -->
+    <script src="js/main.js"></script>
+    <script src="js/cotizador.js"></script>
+</body>
+</html>
