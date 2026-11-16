@@ -98,4 +98,24 @@
     .social-links a {
         margin: 0 10px;
     }
+
+    .nav-cta {
+        display: block;
+        margin-top: 12px;
+    }
+
+    .nav-links .nav-cta a {
+        background-color: var(--whatsapp-color);
+        color: var(--bg-white);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 5px;
+        border-bottom: none;
+        padding: 12px;
+    }
+
+    .nav-links .nav-cta a:hover {
+        background-color: var(--whatsapp-hover);
+        color: var(--bg-white);
+    }
 }

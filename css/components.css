@@ -449,3 +449,8 @@
 .cta-banner .btn {
     margin-top: 20px;
 }
+
+/* CTA dentro del menú móvil */
+.nav-cta {
+    display: none;
+}
