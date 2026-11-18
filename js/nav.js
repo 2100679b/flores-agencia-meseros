@@ -1,18 +1,24 @@
 (function () {
     'use strict';
 
-    var NUMERO_WHATSAPP = '524433514415';
-    var MENSAJE = 'Hola, quiero contratar su servicio';
-
     var toggle = document.querySelector('.nav-toggle');
-    if (!toggle) return;
+    var menu = document.getElementById('menu-principal');
+    if (!toggle || !menu) return;
 
-    toggle.setAttribute('aria-label', 'Contratar servicio por WhatsApp');
-    toggle.removeAttribute('aria-controls');
-    toggle.removeAttribute('aria-expanded');
+    function setOpen(open) {
+        menu.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+    }
 
     toggle.addEventListener('click', function () {
-        var url = 'https://wa.me/' + NUMERO_WHATSAPP + '?text=' + encodeURIComponent(MENSAJE);
-        window.open(url, '_blank', 'noopener');
+        setOpen(!menu.classList.contains('open'));
+    });
+
+    menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setOpen(false);
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
     });
 })();
