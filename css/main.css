@@ -157,6 +157,22 @@ footer {
     color: var(--accent-color);
 }
 
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icon {
+    display: inline-flex;
+}
+
+.social-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
 /* Botón flotante de WhatsApp */
 .whatsapp-float {
     position: fixed;
