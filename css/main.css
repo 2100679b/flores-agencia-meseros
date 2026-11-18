@@ -2,21 +2,24 @@
    1. VARIABLES Y CONFIGURACIÓN GLOBAL
    ========================================== */
 :root {
-    --primary-color: #1a2a3a;
-    --accent-color: #d4af37;
-    --accent-hover: #b89628;
+    --primary-color: #4a1424;
+    --primary-dark: #2a0a14;
+    --accent-color: #c9a24b;
+    --accent-hover: #a8832f;
     --whatsapp-color: #25d366;
     --whatsapp-hover: #1da851;
-    --bg-light: #f8f9fa;
+    --bg-light: #fbf7f0;
+    --bg-soft: #f3e9dc;
     --bg-white: #ffffff;
-    --text-dark: #2c3e50;
-    --text-muted: #6c757d;
-    --border-color: #e2e8f0;
+    --text-dark: #2e2428;
+    --text-muted: #7a6c70;
+    --border-color: #eaded0;
 
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-main: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-title: 'Playfair Display', Georgia, 'Times New Roman', serif;
     --container-width: 1200px;
     --transition-fast: 0.3s ease;
-    --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-soft: 0 6px 24px rgba(74, 20, 36, 0.10);
     --navbar-height: 80px;
 }
 
@@ -37,6 +40,12 @@ body {
     color: var(--text-dark);
     background-color: var(--bg-light);
     line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-title);
+    line-height: 1.2;
+    letter-spacing: 0.2px;
 }
 
 a {

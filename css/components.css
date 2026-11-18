@@ -59,7 +59,7 @@
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(26, 42, 58, 0.8), rgba(26, 42, 58, 0.8)),
+    background: linear-gradient(135deg, rgba(58, 12, 28, 0.90), rgba(26, 10, 16, 0.78)),
                 url('../assets/images/hero-bg.jpg') center/cover no-repeat;
     background-color: var(--primary-color);
     color: var(--bg-white);
@@ -81,7 +81,7 @@
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #e2e8f0;
+    color: #f3e9dc;
 }
 
 .hero-buttons {
@@ -339,7 +339,7 @@
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.30);
 }
 
 .form-group textarea {
@@ -369,7 +369,7 @@
 .result-box {
     margin-top: 25px;
     padding: 20px;
-    background-color: #eef6ff;
+    background-color: #fbf3e4;
     border-left: 5px solid var(--primary-color);
     border-radius: 4px;
 }
@@ -502,7 +502,7 @@ body.lightbox-open {
 }
 
 .lightbox-caption {
-    color: #e2e8f0;
+    color: #f3e9dc;
     font-size: 0.95rem;
     text-align: center;
 }
@@ -559,4 +559,234 @@ body.lightbox-open {
         bottom: 20px;
         transform: none;
     }
+}
+
+/* ==========================================
+   9. TEMA VISUAL (DECORACIÓN Y SECCIONES NUEVAS)
+   ========================================== */
+body {
+    background-image: radial-gradient(circle at 1px 1px, rgba(74, 20, 36, 0.05) 1px, transparent 0);
+    background-size: 26px 26px;
+}
+
+.navbar {
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.btn {
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+}
+
+.btn-primary {
+    color: var(--primary-dark);
+    box-shadow: 0 4px 14px rgba(201, 162, 75, 0.35);
+}
+
+/* Hero */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    padding: 6px 18px;
+    border: 1px solid var(--accent-color);
+    border-radius: 50px;
+}
+
+/* Títulos de sección con adorno dorado */
+.services-preview > h2::after,
+.features > h2::after,
+.values-section > h2::after,
+.gallery-section > h2::after,
+.how-it-works > h2::after,
+.page-header h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 14px auto 0;
+    border-radius: 3px;
+}
+
+.section-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.section-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 2px;
+}
+
+.section-link a:hover {
+    color: var(--accent-hover);
+}
+
+/* Franja de destacados */
+.highlights {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: 22px 0;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.highlights-grid p {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.highlights-grid p::before {
+    content: "\25C6";
+    color: var(--accent-color);
+    margin-right: 8px;
+}
+
+/* Banda de fondo para "Por qué elegirnos" */
+.band-alt {
+    background-color: var(--bg-soft);
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+
+.band-alt .features {
+    padding-top: 60px;
+}
+
+/* Cómo funciona */
+.how-it-works {
+    padding-top: 70px;
+}
+
+.how-it-works > h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.step {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.step-number {
+    font-family: var(--font-title);
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+/* Tarjetas */
+.card {
+    border-top: 4px solid var(--accent-color);
+}
+
+.card-icon {
+    border: 3px solid var(--accent-color);
+    padding: 2px;
+}
+
+.service-detail {
+    border-left: 5px solid var(--accent-color);
+}
+
+.service-text h2 {
+    font-size: 1.6rem;
+}
+
+.mv-card {
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.contact-info {
+    border-top: 4px solid var(--accent-color);
+}
+
+/* Footer */
+footer {
+    padding: 0;
+    border-top: 4px solid var(--accent-color);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+    gap: 40px;
+    padding-top: 45px;
+    padding-bottom: 35px;
+}
+
+.footer-grid h3 {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.footer-grid h4 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.footer-grid p,
+.footer-links li {
+    color: #eadfd2;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-grid .social-links {
+    margin-top: 14px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-grid .social-links a {
+    margin-left: 0;
+}
+
+.footer-bottom {
+    background-color: var(--primary-dark);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #cdbfae;
 }

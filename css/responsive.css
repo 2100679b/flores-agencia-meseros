@@ -118,4 +118,23 @@
         background-color: var(--whatsapp-hover);
         color: var(--bg-white);
     }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-grid .social-links {
+        justify-content: center;
+    }
 }
