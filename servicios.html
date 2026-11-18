@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios | Flores. Agencia de Meseros</title>
-    <meta name="description" content="Servicio de meseros, renta de loza y cristalería, renta de mobiliario y cotizador de eventos en Morelia.">
-    <meta name="theme-color" content="#4a1424">
+    <meta name="description" content="Servicio de meseros, renta de loza y cristalería, renta de mobiliario para eventos en Morelia.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#4a1424" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#150d10" media="(prefers-color-scheme: dark)">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_MX">
     <meta property="og:title" content="Servicios | Flores. Agencia de Meseros">
-    <meta property="og:description" content="Servicio de meseros, renta de loza y cristalería, renta de mobiliario y cotizador de eventos en Morelia.">
+    <meta property="og:description" content="Servicio de meseros, renta de loza y cristalería, renta de mobiliario para eventos en Morelia.">
     <meta property="og:image" content="https://agencia-meseros-flores.netlify.app/assets/images/logos/logo.jpg">
     <meta property="og:url" content="https://agencia-meseros-flores.netlify.app/servicios.html">
     <meta property="og:site_name" content="Flores. Agencia de Meseros">
@@ -149,67 +151,6 @@
                 </div>
             </article>
         </section>
-
-        <!-- Sección Calculadora / Cotizador -->
-        <section class="calculator-section">
-            <h2>Calcula una Estimación para tu Evento</h2>
-            <form id="cotizador-form" class="calculator-form">
-                <div class="form-group">
-                    <label for="tipo-servicio">Tipo de Evento:</label>
-                    <select id="tipo-servicio" name="tipo-servicio">
-                        <option value="Boda">Boda</option>
-                        <option value="XV Años">XV Años</option>
-                        <option value="Bautizo / Primera Comunión">Bautizo / Primera Comunión</option>
-                        <option value="Fiesta Infantil">Fiesta Infantil</option>
-                        <option value="Cumpleaños / Aniversario">Cumpleaños / Aniversario</option>
-                        <option value="Despedida de Soltero/a">Despedida de Soltero/a</option>
-                        <option value="Graduación">Graduación</option>
-                        <option value="Fiesta Privada / Cerveceada">Fiesta Privada / Cerveceada</option>
-                        <option value="Banquete Formal / Gala">Banquete Formal / Gala</option>
-                        <option value="Buffet / Taquiza">Buffet / Taquiza</option>
-                        <option value="Cóctel / Canapés">Cóctel / Canapés</option>
-                        <option value="Evento Corporativo / Empresarial">Evento Corporativo / Empresarial</option>
-                        <option value="Otro tipo de evento">Otro tipo de evento</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="invitados">Número de Invitados estimado:</label>
-                    <input type="number" id="invitados" name="invitados" placeholder="Ej. 120" min="10" inputmode="numeric" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="horas">Horas de servicio requeridas:</label>
-                    <input type="number" id="horas" name="horas" placeholder="Ej. 5" min="1" inputmode="numeric" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="meseros-solicitados">Número de Meseros deseados (Opcional):</label>
-                    <input type="number" id="meseros-solicitados" name="meseros-solicitados" placeholder="Ej. 4 (déjalo vacío si deseas nuestra sugerencia)" min="1" inputmode="numeric">
-                </div>
-
-                <!-- Servicios Adicionales Requeridos -->
-                <fieldset class="form-group" style="border: none;">
-                    <legend style="font-weight: 600; margin-bottom: 8px;">Servicios adicionales requeridos:</legend>
-                    <div class="checkbox-group">
-                        <label>
-                            <input type="checkbox" id="req-loza" name="req-loza"> Renta de Loza y Cristalería
-                        </label>
-                        <label>
-                            <input type="checkbox" id="req-mobiliario" name="req-mobiliario"> Renta de Mobiliario (Mesas/Sillas/Mantelería)
-                        </label>
-                    </div>
-                </fieldset>
-
-                <button type="button" id="btn-calcular" class="btn btn-secondary">Generar Estimación</button>
-            </form>
-
-            <div id="resultado-cotizacion" class="result-box hidden" aria-live="polite">
-                <h3>Resumen de la Solicitud:</h3>
-                <p id="recomendacion-texto"></p>
-                <a id="btn-cotizar-whatsapp" href="#" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Enviar esta cotización por WhatsApp</a>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -256,6 +197,5 @@
 
     <script src="js/main.js" defer></script>
     <script src="js/nav.js" defer></script>
-    <script src="js/cotizador.js" defer></script>
 </body>
 </html>
