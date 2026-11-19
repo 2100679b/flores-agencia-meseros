@@ -114,32 +114,44 @@
             <!-- Formulario de Contacto -->
             <section class="contact-form-container">
                 <h2>Envíanos un Mensaje</h2>
-                <form id="contact-form" action="#" method="POST">
+                <form id="contact-form" action="#" method="POST" novalidate>
                     <div class="form-group">
                         <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Ej. Carlos Mendoza">
+                        <input type="text" id="nombre" name="nombre" required maxlength="60" autocomplete="name" placeholder="Ej. Carlos Mendoza" aria-describedby="err-nombre">
+                        <p class="field-error" id="err-nombre" role="alert"></p>
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono / WhatsApp:</label>
-                        <input type="tel" id="telefono" name="telefono" required autocomplete="tel" pattern="[0-9+\s\-]{10,15}" placeholder="Ej. 4433514415">
+                        <input type="tel" id="telefono" name="telefono" required maxlength="20" autocomplete="tel" inputmode="tel" placeholder="Ej. 4433514415" aria-describedby="err-telefono">
+                        <p class="field-error" id="err-telefono" role="alert"></p>
                     </div>
                     <div class="form-group">
                         <label for="email">Correo electrónico (opcional):</label>
-                        <input type="email" id="email" name="email" autocomplete="email" placeholder="ejemplo@correo.com">
+                        <input type="email" id="email" name="email" maxlength="100" autocomplete="email" placeholder="ejemplo@correo.com" aria-describedby="err-email">
+                        <p class="field-error" id="err-email" role="alert"></p>
                     </div>
                     <div class="form-group">
                         <label for="fecha">Fecha del Evento:</label>
-                        <input type="date" id="fecha" name="fecha" required>
+                        <input type="date" id="fecha" name="fecha" required aria-describedby="hint-fecha err-fecha">
+                        <small class="field-hint" id="hint-fecha">Elige una fecha a partir de hoy.</small>
+                        <p class="field-error" id="err-fecha" role="alert"></p>
                     </div>
                     <div class="form-group">
-                        <label for="lugar">Lugar / Ciudad del evento:</label>
-                        <input type="text" id="lugar" name="lugar" placeholder="Ej. Salón Jardín, Morelia">
+                        <label for="lugar">Ubicación del evento:</label>
+                        <div class="autocomplete">
+                            <input type="text" id="lugar" name="lugar" required maxlength="150" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="lugar-sugerencias" placeholder="Ej. Salón Jardín, Morelia" aria-describedby="hint-lugar err-lugar">
+                            <ul class="suggestions" id="lugar-sugerencias" role="listbox" hidden></ul>
+                        </div>
+                        <small class="field-hint" id="hint-lugar">Escribe el nombre del lugar y la ciudad (ej. Salón Jardín, Morelia) o la dirección completa. Solo atendemos eventos en Michoacán de Ocampo.</small>
+                        <p class="field-error" id="err-lugar" role="alert"></p>
                     </div>
                     <div class="form-group">
                         <label for="mensaje">Detalles del Evento (Meseros necesarios, loza, sillas, mesas, etc.):</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí los detalles..."></textarea>
+                        <textarea id="mensaje" name="mensaje" rows="5" required maxlength="500" placeholder="Escribe aquí los detalles..." aria-describedby="err-mensaje"></textarea>
+                        <p class="field-error" id="err-mensaje" role="alert"></p>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar Solicitud por WhatsApp</button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                 </form>
             </section>
 
